@@ -23,6 +23,8 @@ jobs:
         run: wget -O data/fraud.csv ${{github.event.client_payload.dataseturl}}
       - name: cat dataset
         run: cat data/fraud.csv
+      - name: train model
+        run: python model/train.py
 
       #DOCKER BUILD
       - name: docker build
