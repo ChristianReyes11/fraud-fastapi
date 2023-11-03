@@ -25,6 +25,8 @@ jobs:
         run: cat data/fraud.csv
       - name: train model
         run: python model/train.py
+      -name: ls
+        run: ls
 
       #DOCKER BUILD
       - name: docker build
